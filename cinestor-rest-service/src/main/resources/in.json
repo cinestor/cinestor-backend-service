@@ -1,0 +1,101 @@
+{
+	"name": "The Doormen",
+	"type": "TvShow",
+	"isPublic": false,
+	"members": [
+		{
+			"login": "gca",
+			"token": null,
+			"email": "gcagca@gca.com",
+			"enabled": true,
+			"password": "$2a$11$r/NqqAxzJa.luq7dgj7Og.ekQoorNWu/rxn6Ldqd8Q68oetPqLudO",
+			"displayName": "Gaël CARRE"
+		}
+	],
+	"elements": [
+		{
+			"number": 1,
+			"type": "Season",
+			"subelements": [
+				{
+					"number": 1,
+					"type": "Episode",
+					"subelements": [
+						{
+							"number": 1,
+							"type": "Scene",
+							"subelements": [
+								{
+									"type": "Character",
+									"name": "Bob Sinclair",
+									"sheet": "Un justicier mystérieux errant dans le Far West qui est un as de la gâchette"
+								},
+								{
+									"type": "Character",
+									"name": "Marine Le Pen",
+									"sheet": "Un justicier mystérieux errant dans le Far West qui est un as de la gâchette"
+								},
+								{
+									"type": "Place",
+									"name": "Paris Bercy",
+									"description": "Siege du ministère des finances"
+								},
+								{
+									"type": "SoundTrack",
+									"artist": "Savant",
+									"track": "Circus",
+									"youtube": "0RJYaEwu3Ps"
+								}
+							],
+							"content": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker."
+						},
+						{
+							"number": 2,
+							"type": "Scene",
+							"subelements": [
+								{
+								
+									"type": "Character",
+									"name": "Bob Sinclair",
+									"sheet": "Un justicier mystérieux errant dans le Far West qui est un as de la gâchette"
+								},
+								{
+									"type": "Character",
+									"name": "Marine Le Pen",
+									"sheet": "Un justicier mystérieux errant dans le Far West qui est un as de la gâchette"
+								},
+								{
+									"type": "Place",
+									"name": "Paris Bercy",
+									"description": "Siege du ministère des finances"
+								},
+								{
+									"type": "SoundTrack",
+									"artist": "Savant",
+									"track": "Circus",
+									"youtube": "0RJYaEwu3Ps"
+								}
+							],
+							"content": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker."
+						}
+					],
+				},
+				{
+					"number": 2,
+					"type": 2
+				}
+			]
+		},
+		{
+			"number": 2,
+			"type": "Season",
+			"subelements": [
+				{
+					"type": "Episode",
+					"number": 1
+				}
+			]
+			"number": null
+		}
+	]
+}
