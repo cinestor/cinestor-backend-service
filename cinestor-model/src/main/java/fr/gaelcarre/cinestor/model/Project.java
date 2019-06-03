@@ -31,45 +31,26 @@ public class Project {
 	private Set<User> members;
 
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "project")
-	private Set<Scene> scenes;
-
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "project")
-	private Set<Season> seasons;
-
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "projectHard")
 	private Set<Element> projectElements;
 
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "project")
+	private Set<Element> elements;
+
 	/**
-	 * @return the scenes
+	 * @return the elements
 	 */
-	public Set<Scene> getScenes() {
-		return this.scenes;
+	public Set<Element> getElements() {
+		return this.elements;
 	}
 
 	/**
-	 * @param scenes
-	 *            the scenes to set
+	 * @param elements
+	 *            the elements to set
 	 */
-	public void setScenes(Set<Scene> scenes) {
-		this.scenes = scenes;
-	}
-
-	/**
-	 * @return the seasons
-	 */
-	public Set<Season> getSeasons() {
-		return this.seasons;
-	}
-
-	/**
-	 * @param seasons
-	 *            the seasons to set
-	 */
-	public void setSeasons(Set<Season> seasons) {
-		this.seasons = seasons;
+	public void setElements(Set<Element> elements) {
+		this.elements = elements;
 	}
 
 	/**

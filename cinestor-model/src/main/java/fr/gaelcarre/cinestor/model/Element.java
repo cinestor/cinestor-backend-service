@@ -1,6 +1,6 @@
 package fr.gaelcarre.cinestor.model;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -21,21 +21,21 @@ public class Element {
 
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "parent")
-	private List<Element> subelements;
+	private Set<Element> subelements;
 	@ManyToOne
 	@JoinColumn(name = "parent", insertable = false, updatable = false)
 	@JsonIgnore
 	private Element parent;
 
 	@ManyToOne
-	@JoinColumn(name = "scene", insertable = false, updatable = false)
-	@JsonIgnore
-	private Scene scenes;
-
-	@ManyToOne
 	@JoinColumn(name = "projectHard", insertable = false, updatable = false)
 	@JsonIgnore
 	private Project projectHard;
+
+	@ManyToOne
+	@JoinColumn(name = "project", insertable = false, updatable = false)
+	@JsonIgnore
+	private Project project;
 
 	private TypeElement type;
 
@@ -44,100 +44,36 @@ public class Element {
 	@Lob
 	private String description;
 
-	private String artist;
-	private String track;
-	private String youtube;
-	private String name;
-	private String sheet;
+	private String value;
 
 	/**
-	 * @return the scenes
+	 * @return the value
 	 */
-	public Scene getScenes() {
-		return this.scenes;
+	public String getValue() {
+		return this.value;
 	}
 
 	/**
-	 * @param scenes
-	 *            the scenes to set
+	 * @param value
+	 *            the value to set
 	 */
-	public void setScenes(Scene scenes) {
-		this.scenes = scenes;
+	public void setValue(String value) {
+		this.value = value;
 	}
 
 	/**
-	 * @return the artist
+	 * @return the project
 	 */
-	public String getArtist() {
-		return this.artist;
+	public Project getProject() {
+		return this.project;
 	}
 
 	/**
-	 * @param artist
-	 *            the artist to set
+	 * @param project
+	 *            the project to set
 	 */
-	public void setArtist(String artist) {
-		this.artist = artist;
-	}
-
-	/**
-	 * @return the track
-	 */
-	public String getTrack() {
-		return this.track;
-	}
-
-	/**
-	 * @param track
-	 *            the track to set
-	 */
-	public void setTrack(String track) {
-		this.track = track;
-	}
-
-	/**
-	 * @return the youtube
-	 */
-	public String getYoutube() {
-		return this.youtube;
-	}
-
-	/**
-	 * @param youtube
-	 *            the youtube to set
-	 */
-	public void setYoutube(String youtube) {
-		this.youtube = youtube;
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return this.name;
-	}
-
-	/**
-	 * @param name
-	 *            the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	/**
-	 * @return the sheet
-	 */
-	public String getSheet() {
-		return this.sheet;
-	}
-
-	/**
-	 * @param sheet
-	 *            the sheet to set
-	 */
-	public void setSheet(String sheet) {
-		this.sheet = sheet;
+	public void setProject(Project project) {
+		this.project = project;
 	}
 
 	/**
@@ -218,7 +154,7 @@ public class Element {
 	/**
 	 * @return the subelements
 	 */
-	public List<Element> getSubelements() {
+	public Set<Element> getSubelements() {
 		return this.subelements;
 	}
 
@@ -226,7 +162,7 @@ public class Element {
 	 * @param subelements
 	 *            the subelements to set
 	 */
-	public void setSubelements(List<Element> subelements) {
+	public void setSubelements(Set<Element> subelements) {
 		this.subelements = subelements;
 	}
 

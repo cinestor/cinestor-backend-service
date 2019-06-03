@@ -1,25 +1,78 @@
 package fr.gaelcarre.cinestor.model;
 
-import com.fasterxml.jackson.annotation.JsonValue;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-public enum TypeElement {
+@Entity
+public class TypeElement {
 
-	CHARACTER("Character"), PLACE("Place"), SOUNDTRACK("SoundTrack"), ELEMENTSET("ElementSet");
+	private @Id @GeneratedValue Long id;
 
-	private String title;
+	private String name;
 
-	TypeElement(String title) {
-		this.title = title;
+	private Integer level;
+
+	/**
+	 *
+	 */
+	public TypeElement() {
+		super();
 	}
 
-	@Override
-	public String toString() {
-		return this.title;
+	/**
+	 * @param name
+	 * @param level
+	 */
+	public TypeElement(String name, Integer level) {
+		super();
+		this.name = name;
+		this.level = level;
 	}
 
-	@JsonValue
-	public String getTitle() {
-		return this.title;
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return this.id;
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return this.name;
+	}
+
+	/**
+	 * @param name
+	 *            the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the level
+	 */
+	public Integer getLevel() {
+		return this.level;
+	}
+
+	/**
+	 * @param level
+	 *            the level to set
+	 */
+	public void setLevel(Integer level) {
+		this.level = level;
 	}
 
 }
