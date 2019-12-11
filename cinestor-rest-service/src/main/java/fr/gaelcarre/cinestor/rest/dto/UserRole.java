@@ -1,4 +1,4 @@
-package fr.gaelcarre.cinestor.model;
+package fr.gaelcarre.cinestor.rest.dto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
